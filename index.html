@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <aside class="sidebar">
+        <div class="steps">
+          <div class="step active" data-step="1">
+            <p class="step__num fs-bold-m">1</p>
+            <div class="step__details">
+              <p class="fs-s">STEP 1</p>
+              <p class="fs-bold-m">YOUR INFO</p>
+            </div>
+          </div>
+          <div class="step" data-step="2">
+            <p class="step__num fs-bold-m">2</p>
+            <div class="step__details">
+              <p class="fs-s">STEP 2</p>
+              <p class="fs-bold-m">SELECT PLAN</p>
+            </div>
+          </div>
+          <div class="step" data-step="3">
+            <p class="step__num fs-bold-m">3</p>
+            <div class="step__details">
+              <p class="fs-s">STEP 3</p>
+              <p class="fs-bold-m">ADD-ONS</p>
+            </div>
+          </div>
+          <div class="step" data-step="4">
+            <p class="step__num fs-bold-m">4</p>
+            <div class="step__details">
+              <p class="fs-s">STEP 4</p>
+              <p class="fs-bold-m">SUMMARY</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="form__wrapper">
+        <div class="form__steps">
+          <div class="form form__1" data-step="1">
+            <div class="form__heading">
+              <h1 class="fs-bold-xxl">Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+            </div>
+            <form class="form__inputs">
+              <div class="form__input">
+                <label for="name" class="fs-m">
+                  <div class="top">
+                    <span>Name</span>
+                    <span class="fs-bold-m required danger none">This field is required</span>
+                  </div>
+                </label>
+                <input type="text" name="name" id="name" placeholder="e.g. Stephen Kin" required>
+              </div>
+              <div class="form__input">
+                <label for="email" class="fs-m">
+                  <div class="top">
+                    <span>Email Address</span>
+                    <span class="fs-bold-m required danger none">This field is required</span>
+                  </div>
+                </label>
+                <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+              </div>
+              <div class="form__input">
+                <label for="phone" class="fs-m">
+                  <div class="top">
+                    <span>Phone Number</span>
+                    <span class="fs-bold-m required danger none">This field is required</span>
+                  </div>
+                </label>
+                <input type="tel" name="phone" id="phone" placeholder="e.g. +1 234 567 890" required>
+              </div>
+            </form>
+          </div>
+          <div class="form form__2 none" data-step="2">
+            <div class="form__heading">
+              <h1 class="fs-bold-xxl">Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </div>
+            <form class="form__inputs plan__wrapper">
+              <input type="radio" name="plan" id="arcade" value="0" checked>
+              <label class="card" for="arcade">
+                <img src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+                <div class="plan__details">
+                  <p class="fs-m-bold-l plan__type">Arcade</p>
+                  <p class="fs-m plan__price">$9/mo</p>
+                  <p class="fs-s trial hidden">2 months free</p>
+                </div>
+              </label>
+              <input type="radio" name="plan" id="advanced" value="1">
+              <label class="card" for="advanced">
+                <img src="./assets/images/icon-advanced.svg" alt="advanced-icon">
+                <div class="plan__details">
+                  <p class="fs-m-bold-l plan__type">Advanced</p>
+                  <p class="fs-m plan__price">$12/mo</p>
+                  <p class="fs-s trial hidden">2 months free</p>
+                </div>
+              </label>
+              <input type="radio" name="plan" id="pro" value="2">
+              <label class="card" for="pro">
+                <img src="./assets/images/icon-pro.svg" alt="pro-icon">
+                <div class="plan__details">
+                  <p class="fs-m-bold-l plan__type">Pro</p>
+                  <p class="fs-m plan__price">$15/mo</p>
+                  <p class="fs-s trial hidden">2 months free</p>
+                </div>
+              </label>
+            </form>
+            <div class="toggle__wrapper">
+              <div class="toggle">
+                <p class="fs-bold-m toggle__month" for="switch">Monthly</p>
+                <span class="toggle__slider" for="switch"></span>
+                <p class="fs-bold-m toggle__year" for="switch">Yearly</p>
+              </div>
+            </div>
+          </div>
+          <div class="form form__3 none" data-step="3">
+            <div class="form__heading">
+              <h1 class="fs-bold-xxl">Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </div>
+            <form class="form__inputs add-ons__wrapper">
+              <div class="add-ons">
+                <div class="left" data-value="0">
+                  <div class="checkbox">
+                    <img class="checkmark none" src="./assets/images/icon-checkmark.svg" alt="checkmark">
+                  </div>
+                  <div class="add-ons__details">
+                    <p class="fs-m-bold-l">Online service</p>
+                    <p class="fs-m">Access to multiplayer games</p>
+                  </div>
+                </div>
+                <p class="add-ons__price">+$1/mo</p>
+              </div>
+              <div class="add-ons">
+                <div class="left" data-value="1">
+                  <div class="checkbox">
+                    <img class="checkmark none" src="./assets/images/icon-checkmark.svg" alt="checkmark">
+                  </div>
+                  <div class="add-ons__details">
+                    <p class="fs-m-bold-l">Large storage</p>
+                    <p class="fs-m">Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p class="add-ons__price">+$2/mo</p>
+              </div>
+              <div class="add-ons">
+                <div class="left" data-value="2">
+                  <div class="checkbox">
+                    <img class="checkmark none" src="./assets/images/icon-checkmark.svg" alt="checkmark">
+                  </div>
+                  <div class="add-ons__details">
+                    <p class="fs-m-bold-l">Customazible profile</p>
+                    <p class="fs-m">Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p class="add-ons__price">+$2/mo</p>
+              </div>
+            </form>
+          </div>
+          <div class="form form__4 none" data-step="4">
+            <div class="form__heading">
+              <h1 class="fs-bold-xxl">Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+            </div>
+            <div class="summary">
+              <div class="summary__details">
+                <div class="summary__plan">
+                  <div class="left">
+                    <p class="fs-m-bold-l summary__plan-type">Arcade (Monthly)</p>
+                    <p class="fs-m change-btn">Change</p>
+                  </div>
+                  <p class="fs-bold-l summary__plan-price">$9/mo</p>
+                </div>
+                <div class="summary__add-ons-list">
+                  <div class="summary__add-ons-wrapper none">
+                    <p class="fs-m gray summary__add-ons">Online service</p>
+                    <p class="fs-m summary__add-ons-price">+$1/mo</p>
+                  </div>
+                  <div class="summary__add-ons-wrapper none">
+                    <p class="fs-m gray summary__add-ons">Large storage</p>
+                    <p class="fs-m summary__add-ons-price">+$2/mo</p>
+                  </div>
+                  <div class="summary__add-ons-wrapper none">
+                    <p class="fs-m gray summary__add-ons">Customazible profile</p>
+                    <p class="fs-m summary__add-ons-price">+$2/mo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="summary__total">
+                <p class="fs-m gray summary__total-billing">Total (per month)</p>
+                <p class="fs-bold-xl summary__total-price">+$10/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="form form__thx none">
+            <img src="./assets/images/icon-thank-you.svg" alt="thank you">
+            <div class="thx__txt">
+              <h1 class="fs-bold-xxl">Thank you!</h1>
+              <p class="fs-l gray">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            </div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="b-btn back-btn fs-m-bold-l hidden">Go Back</button>
+          <button class="btn next-btn fs-m-bold-l" type="submit">Next Step</button>
+          <button class="btn confirm-btn fs-m-bold-l purple-bg none" type="submit">Confirm</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="./assets/js/dist.min.js"></script>
+</body>
+</html>
