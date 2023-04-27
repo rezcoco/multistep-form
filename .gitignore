@@ -15,5 +15,5 @@
 .gitignore
 .DS_Store
 .prettierignore
-design/
+design/*
 *template.md
