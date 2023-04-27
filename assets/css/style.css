@@ -572,12 +572,33 @@ a {
         padding: 0;
     }
 
+    .form__inputs.plan__wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+    .form__inputs.plan__wrapper .card{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        width: 100%;
+        min-height: 77px;
+        max-height: 99px;
+    }
+    .form__inputs.plan__wrapper .plan__details{
+        margin-top: 0;
+    }
+
+    .form__thx {
+        height: 30rem;
+    }
+
     .form {
         width: 343px;
         background: #fff;
         padding: 1.5em;
         border-radius: 1em;
-        transform: translateY(-18%);
+        transform: translateY(-5rem);
     }
     .btns {
         padding: 1.2em;

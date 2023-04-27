@@ -117,7 +117,7 @@
             inputPhone.classList.add('danger')
             requiredTxt[2].classList.remove('none')
             return false
-        } else if (!inputPhone.value.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) {
+        } else if (!inputPhone.value.match(/^\+?[1-9][0-9]{7,14}$/)) {
             inputPhone.classList.add('danger')
             requiredTxt[2].textContent = "Please fill a valid phone number"
             requiredTxt[2].classList.remove('none')

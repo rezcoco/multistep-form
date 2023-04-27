@@ -12,8 +12,8 @@
 *.xd
 
 # Avoid your project being littered with annoying .DS_Store files!
+.gitignore
 .DS_Store
 .prettierignore
-./design
-./fonts
+design/
 *template.md
