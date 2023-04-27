@@ -56,9 +56,10 @@ a {
     font-size: 32px;
 }
 
-.fs-bold-xl {
+.fs-bold-xxl {
     font-size: 32px;
     font-weight: 700;
+    color: var(--Marine-blue);
 }
 .fs-xl {
     font-size: 20px;
